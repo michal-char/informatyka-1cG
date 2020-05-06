@@ -16,6 +16,8 @@ void instrukcja()
 	cout << "I DRUGA LICZBE (W PRZYPADKU OPERACJI WYMAGAJACYCH 1 ZMIENNEJ PROGRAM NIE ZAPYTA CIE" << endl;
 	cout << "O NIA I AUTOMATYCZNE WYKONA DZIALANIE PO WPROWADZENIU ZNAKU ODPOWIEDNIEJ OPERACJI." << endl;
 	cout << "SA ONE OZNACZONE W SPISIE ~ NA POCZATKU.)" << endl;
+	cout << ""
+	cout << "JESLI SIE POMYLILES> LUB CHCESZ ZACZAC OD NOWA WPISZ X"
 	cout << "" << endl;
 
 	cout << "MOZLIWE OPERACJE:" << endl;
@@ -158,14 +160,15 @@ int main()
 	{
 		cin >> operacja;
 
-		if (operacja != '!' && operacja != 'n' && operacja != 'a')
+		if (operacja != '!' && operacja != 'n' && operacja != 'a' && operacja !='X')
 		{
 			cin >> b;
 		}
 
 		if (operacja == 'X' || a == 'X' || b == 'X')
 		{
-			return 0;
+			cout << "cleared";
+			cin >> a >> operacja >> b;
 		}
 
 		cout << liczenie(operacja, a, b);
