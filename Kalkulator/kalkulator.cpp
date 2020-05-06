@@ -17,6 +17,8 @@ void instrukcja()
 	cout << "O NIA I AUTOMATYCZNE WYKONA DZIALANIE PO WPROWADZENIU ZNAKU ODPOWIEDNIEJ OPERACJI." << endl;
 	cout << "SA ONE OZNACZONE W SPISIE ~ NA POCZATKU.)" << endl;
 	cout << "" << endl;
+	cout << "W JEDNEJ LINI MOZNA WYKONAC TYLKO JEDNO DZAILANIE!" << endl;
+	cout << "" << endl;
 	cout << "JESLI SIE POMYLILES, LUB CHCESZ ZACZAC OD NOWA WPISZ X" << endl;
 	cout << "" << endl;
 
@@ -167,7 +169,7 @@ int main()
 
 		if (operacja == 'X' || a == 'X' || b == 'X')
 		{
-			cout << "cleared";
+			cout << "wyczyszczone";
 			cin >> a >> operacja >> b;
 		}
 
