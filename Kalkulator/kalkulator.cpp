@@ -17,7 +17,7 @@ void instrukcja()
 	cout << "O NIA I AUTOMATYCZNE WYKONA DZIALANIE PO WPROWADZENIU ZNAKU ODPOWIEDNIEJ OPERACJI." << endl;
 	cout << "SA ONE OZNACZONE W SPISIE ~ NA POCZATKU.)" << endl;
 	cout << "" << endl;
-	cout << "JESLI SIE POMYLILES> LUB CHCESZ ZACZAC OD NOWA WPISZ X" << endl;
+	cout << "JESLI SIE POMYLILES, LUB CHCESZ ZACZAC OD NOWA WPISZ X" << endl;
 	cout << "" << endl;
 
 	cout << "MOZLIWE OPERACJE:" << endl;
