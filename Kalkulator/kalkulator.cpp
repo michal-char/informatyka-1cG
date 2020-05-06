@@ -2,6 +2,37 @@
 
 using namespace std;
 
+void instrukcja()
+{
+	cout << "  _  __         _   _            _          _               " << endl;
+	cout << " | |/ /  __ _  | | | |__  _  _  | |  __ _  | |_   ___    _ _ " << endl;
+	cout << " | ' <  / _` | | | | / / | || | | | / _` | |  _| / _ \\  |' _|" << endl;
+	cout << " |_|\\_\\ \\__,_| |_| |_\\_\\ \\__,_| |_| \\__,_| \\___| \\___/  |_|  " << endl;
+	cout << "                                                                         " << endl;
+
+	cout << "INSTRUKCJA:" << endl;
+	cout << "" << endl;
+	cout << "WPROWADZ 1 LICZBE, NESTEPNIE ZNAK OPERACJI KTORA CHCESZ WYKONAC (PODANE PONIZEJ)" << endl;
+	cout << "I DRUGA LICZBE (W PRZYPADKU OPERACJI WYMAGAJACYCH 1 ZMIENNEJ PROGRAM NIE ZAPYTA CIE" << endl;
+	cout << "O NIA I AUTOMATYCZNE WYKONA DZIALANIE PO WPROWADZENIU ZNAKU ODPOWIEDNIEJ OPERACJI." << endl;
+	cout << "SA ONE OZNACZONE W SPISIE ~ NA POCZATKU.)" << endl;
+	cout << "" << endl;
+
+	cout << "MOZLIWE OPERACJE:" << endl;
+	cout << "DODAWANIE (+)" << endl;
+	cout << "ODEJMOWANIE (-)" << endl;
+	cout << "MNOZENIE (*)" << endl;
+	cout << "DZIELENIE (/)" << endl;
+	cout << "POTEGOWANIE (^)" << endl;
+	cout << "PIERWIASTEK - 1 ZMIENNA TO L. PODPIERWIASTKOWA, A 2 TO STOPIEN PIERWIASTKA (#)" << endl;
+	cout << "~SILNIA (!)" << endl;
+	cout << "~LOGARYTM NATURALNY (n)" << endl;
+	cout << "LOGARYTM O DOWOLNEJ PODSTAWIE (l)" << endl;
+	cout << "MODULO (%)" << endl;
+	cout << "~W. BEZWZGLEDNA (a)" << endl;
+	cout << "" << endl;
+}
+
 float dodawanie(float a, float b)
 {
 	float c = a + b;
@@ -72,79 +103,74 @@ float bezwzgl(float a)
 	return c;
 }
 
-int main()
+float liczenie(char operacja, float a, float b)
 {
-	cout << "  _  __         _   _            _          _               " << endl;
-	cout << " | |/ /  __ _  | | | |__  _  _  | |  __ _  | |_   ___    _ _ " << endl;
-	cout << " | ' <  / _` | | | | / / | || | | | / _` | |  _| / _ \\  |' _|" << endl;
-	cout << " |_|\\_\\ \\__,_| |_| |_\\_\\ \\__,_| |_| \\__,_| \\___| \\___/  |_|  " << endl;
-	cout << "                                                                         " << endl;
-
-	cout << "INSTRUKCJA:" << endl;
-	cout << "                                                                         " << endl;
-	cout << "WPROWADZ 1 LICZBE, NESTEPNIE ZNAK OPERACJI KTORA CHCESZ WYKONAC (PODANE PONIZEJ)" << endl;
-	cout << "I DRUGA LICZBE (W PRZYPADKU OPERACJI WYMAGAJACYCH 1 ZMIENNEJ PROGRAM NIE ZAPYTA CIE" << endl;
-	cout << "O NIA I AUTOMATYCZNE WYKONA DZIALANIE PO WPROWADZENIU ZNAKU ODPOWIEDNIEJ OPERACJI." << endl;
-	cout << "SA ONE OZNACZONE W SPISIE ~ NA POCZATKU.)" << endl;
-	cout << "                                                                         " << endl;
-
-	cout << "MOZLIWE OPERACJE:" << endl;
-	cout << "DODAWANIE (+)" << endl;
-	cout << "ODEJMOWANIE (-)" << endl;
-	cout << "MNOZENIE (*)" << endl;
-	cout << "DZIELENIE (/)" << endl;
-	cout << "POTEGOWANIE (^)" << endl;
-	cout << "PIERWIASTEK - 1 ZMIENNA TO L. PODPIERWIASTKOWA, A 2 TO STOPIEN PIERWIASTKA (#)" << endl;
-	cout << "~SILNIA (!)" << endl;
-	cout << "~LOGARYTM NATURALNY (n)" << endl;
-	cout << "LOGARYTM O DOWOLNEJ PODSTAWIE (l)" << endl;
-	cout << "MODULO (%)" << endl;
-	cout << "~W. BEZWZGLEDNA (a)" << endl;
-	
-
-	char operacja;
-	float a, b; 
-	cin >> a;
-	cin >> operacja;
-	if (operacja != '!' && operacja != 'n' && operacja != 'a')
-	{
-		cin >> b;
-	}
-
+	float c;
 	switch (operacja)
 	{
 	case '+':
-		cout << dodawanie(a, b);
+		c = dodawanie(a, b);
 		break;
 	case '-':
-		cout << odejmowanie(a, b);
+		c = odejmowanie(a, b);
 		break;
 	case '*':
-		cout << mnozenie(a, b);
+		c = mnozenie(a, b);
 		break;
 	case '/':
-		cout << dzielenie(a, b);
+		c = dzielenie(a, b);
 		break;
 	case '^':
-		cout << potegowanie(a, b);
+		c = potegowanie(a, b);
 		break;
 	case '#':
-		cout << pierwiastkowanie(a, b);
+		c = pierwiastkowanie(a, b);
 		break;
 	case '!':
-		cout << silnia(a);
+		c = silnia(a);
 		break;
 	case 'n':
-		cout << lognat(a);
+		c = lognat(a);
 		break;
 	case 'l':
-		cout << log(a, b);
+		c = log(a, b);
 		break;
 	case '%':
-		cout << mod(a, b);
+		c = mod(a, b);
 		break;
 	case 'a':
-		cout << bezwzgl(a);
+		c = bezwzgl(a);
 		break;
 	}
-}
+	return c;
+ }
+
+int main()
+{
+	char operacja;
+	float a, b, c;
+
+	instrukcja();
+
+	cin >> a;
+
+	do
+	{
+		cin >> operacja;
+
+		if (operacja != '!' && operacja != 'n' && operacja != 'a')
+		{
+			cin >> b;
+		}
+
+		if (operacja == 'X' || a == 'X' || b == 'X')
+		{
+			return 0;
+		}
+
+		cout << liczenie(operacja, a, b);
+		c = liczenie(operacja, a, b);
+		a = c;
+
+	} while (operacja != ';');
+} 
