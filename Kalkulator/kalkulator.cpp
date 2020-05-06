@@ -74,6 +74,20 @@ float bezwzgl(float a)
 
 int main()
 {
+	cout << "  _  __         _   _            _          _               " << endl;
+	cout << " | |/ /  __ _  | | | |__  _  _  | |  __ _  | |_   ___    _ _ " << endl;
+	cout << " | ' <  / _` | | | | / / | || | | | / _` | |  _| / _ \\  |' _|" << endl;
+	cout << " |_|\\_\\ \\__,_| |_| |_\\_\\ \\__,_| |_| \\__,_| \\___| \\___/  |_|  " << endl;
+	cout << "                                                                         " << endl;
+
+	cout << "INSTRUKCJA:" << endl;
+	cout << "                                                                         " << endl;
+	cout << "WPROWADZ 1 LICZBE, NESTEPNIE ZNAK OPERACJI KTORA CHCESZ WYKONAC (PODANE PONIZEJ)" << endl;
+	cout << "I DRUGA LICZBE (W PRZYPADKU OPERACJI WYMAGAJACYCH 1 ZMIENNEJ PROGRAM NIE ZAPYTA CIE" << endl;
+	cout << "O NIA I AUTOMATYCZNE WYKONA DZIALANIE PO WPROWADZENIU ZNAKU ODPOWIEDNIEJ OPERACJI." << endl;
+	cout << "SA ONE OZNACZONE W SPISIE ~ NA POCZATKU.)" << endl;
+	cout << "                                                                         " << endl;
+
 	cout << "MOZLIWE OPERACJE:" << endl;
 	cout << "DODAWANIE (+)" << endl;
 	cout << "ODEJMOWANIE (-)" << endl;
@@ -81,11 +95,11 @@ int main()
 	cout << "DZIELENIE (/)" << endl;
 	cout << "POTEGOWANIE (^)" << endl;
 	cout << "PIERWIASTEK - 1 ZMIENNA TO L. PODPIERWIASTKOWA, A 2 TO STOPIEN PIERWIASTKA (#)" << endl;
-	cout << "SILNIA (!)" << endl;
-	cout << "LOGARYTM NATURALNY (n)" << endl;
+	cout << "~SILNIA (!)" << endl;
+	cout << "~LOGARYTM NATURALNY (n)" << endl;
 	cout << "LOGARYTM O DOWOLNEJ PODSTAWIE (l)" << endl;
 	cout << "MODULO (%)" << endl;
-	cout << "W. BEZWZGLEDNA (a)" << endl;
+	cout << "~W. BEZWZGLEDNA (a)" << endl;
 	
 
 	char operacja;
